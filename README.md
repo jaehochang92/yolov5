@@ -48,7 +48,7 @@ This repository represents Ultralytics open-source research into future object d
 
 Python 3.8 or later with all [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) dependencies installed, including `torch>=1.6`. To install run:
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Environments
@@ -65,7 +65,7 @@ YOLOv5 may be run in any of the following up-to-date verified environments (with
 
 Inference can be run on most common media formats. Model [checkpoints](https://drive.google.com/open?id=1Drs_Aiu7xx6S-ix95f9kNsA6ueKRpN2J) are downloaded automatically if available. Results are saved to `./inference/output`.
 ```bash
-$ python detect.py --source 0  # webcam
+python detect.py --source 0  # webcam
                             file.jpg  # image 
                             file.mp4  # video
                             path/  # directory
@@ -78,8 +78,10 @@ $ python detect.py --source 0  # webcam
 To run inference on examples in the `./inference/images` folder:
 
 ```bash
-$ python detect.py --source ./inference/images/ --weights yolov5s.pt --conf 0.4
+python detect.py --source ./inference/images/ --weights yolov5s.pt --conf 0.4
+```
 
+```bash
 Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.4, device='', fourcc='mp4v', half=False, img_size=640, iou_thres=0.5, output='inference/output', save_txt=False, source='./inference/images/', view_img=False, weights='yolov5s.pt')
 Using CUDA device0 _CudaDeviceProperties(name='Tesla P100-PCIE-16GB', total_memory=16280MB)
 
@@ -97,7 +99,7 @@ Results saved to /content/yolov5/inference/output
 
 Download [COCO](https://github.com/ultralytics/yolov5/blob/master/data/scripts/get_coco.sh) and run command below. Training times for YOLOv5s/m/l/x are 2/4/6/8 days on a single V100 (multi-GPU times faster). Use the largest `--batch-size` your GPU allows (batch sizes shown for 16 GB devices).
 ```bash
-$ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 64
+  python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 64
                                          yolov5m                                40
                                          yolov5l                                24
                                          yolov5x                                16
@@ -110,7 +112,7 @@ $ python train.py --data coco.yaml --cfg yolov5s.yaml --weights '' --batch-size 
 [![DOI](https://zenodo.org/badge/264818686.svg)](https://zenodo.org/badge/latestdoi/264818686)
 
 
-## About Us
+## About Ultralytics
 
 Ultralytics is a U.S.-based particle physics and AI startup with over 6 years of expertise supporting government, academic and business clients. We offer a wide range of vision AI services, spanning from simple expert advice up to delivery of fully customized, end-to-end production solutions, including:
 - **Cloud-based AI** systems operating on **hundreds of HD video streams in realtime.**
